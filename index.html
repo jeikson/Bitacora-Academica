@@ -614,8 +614,8 @@
 
     @media print {
       @page {
-        size: letter;
-        margin: 14mm 13mm 15mm;
+        size: 13.333in 7.5in;
+        margin: 7mm;
       }
 
       :root {
@@ -640,8 +640,8 @@
         width: auto;
         background: white;
         color: var(--ink);
-        font-size: 10.5pt;
-        line-height: 1.42;
+        font-size: 8.8pt;
+        line-height: 1.34;
       }
 
       .app { display: block; }
@@ -658,18 +658,18 @@
 
       .hero {
         min-height: 0;
-        padding: 0 0 10mm;
+        padding: 0;
         border-bottom: 0;
         page-break-after: always;
       }
 
       .hero-inner {
-        min-height: 235mm;
+        min-height: 176mm;
         display: grid;
         align-content: center;
-        padding: 20mm 18mm;
+        padding: 14mm 16mm;
         border: 1.2pt solid var(--brand);
-        border-radius: 14pt;
+        border-radius: 12pt;
         background:
           linear-gradient(135deg, rgba(20, 95, 90, .16), transparent 38%),
           linear-gradient(180deg, #fffdf8 0%, #eef6f2 100%);
@@ -681,9 +681,9 @@
         content: "SCTS";
         position: absolute;
         right: -5mm;
-        bottom: 4mm;
+        bottom: 1mm;
         color: rgba(20, 95, 90, .08);
-        font-size: 76pt;
+        font-size: 88pt;
         font-weight: 900;
         line-height: 1;
       }
@@ -698,70 +698,77 @@
       }
 
       h1 {
-        max-width: 150mm;
-        margin: 8mm 0 5mm;
-        font-size: 34pt;
+        max-width: 190mm;
+        margin: 7mm 0 4mm;
+        font-size: 31pt;
         line-height: 1.04;
       }
 
       .hero-copy {
-        max-width: 150mm;
-        margin-bottom: 9mm;
+        max-width: 182mm;
+        margin-bottom: 8mm;
         color: #31423d;
-        font-size: 13pt;
+        font-size: 12pt;
       }
 
       .stats {
         grid-template-columns: repeat(4, 1fr);
-        gap: 5mm;
-        margin-top: 5mm;
+        gap: 4mm;
+        margin-top: 4mm;
       }
 
       .stat {
-        min-height: 25mm;
-        padding: 5mm;
+        min-height: 22mm;
+        padding: 4mm;
         border: 1pt solid rgba(20, 95, 90, .24);
         background: rgba(255, 253, 248, .88);
         box-shadow: none;
       }
 
-      .stat strong { font-size: 22pt; }
-      .stat span { font-size: 8.5pt; }
+      .stat strong { font-size: 20pt; }
+      .stat span { font-size: 7.4pt; }
 
       .section {
         padding: 0;
         border-bottom: 0;
       }
 
-      .section + .section { margin-top: 8mm; }
+      .section + .section { margin-top: 0; }
       .section-inner { max-width: none; }
-      #mapa { page-break-after: always; }
+
+      #mapa {
+        min-height: 176mm;
+        display: grid;
+        align-content: center;
+        page-break-after: always;
+      }
 
       #mapa h2,
       #modulos > .section-inner > h2,
       #repaso h2,
       #conclusion h2 {
-        padding-bottom: 3mm;
+        margin-bottom: 3mm;
+        padding-bottom: 2mm;
         border-bottom: 1.5pt solid var(--brand);
         color: var(--brand);
-        font-size: 19pt;
+        font-size: 17pt;
       }
 
       #modulos > .section-inner > .section-lead { display: none; }
 
       .section-lead {
         color: var(--muted);
-        font-size: 10.5pt;
+        font-size: 9pt;
       }
 
       .timeline {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 5mm;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 4mm;
       }
 
       .timeline-item {
-        min-height: 27mm;
-        padding: 4.5mm;
+        min-height: 30mm;
+        padding: 4mm;
         border: 1pt solid var(--line);
         border-radius: 8pt;
         background: #fbf8ef;
@@ -774,7 +781,12 @@
       }
 
       .module {
-        margin: 0 0 7mm;
+        min-height: 176mm;
+        display: grid;
+        grid-template-rows: auto 1fr;
+        align-content: start;
+        margin: 0;
+        padding: 0;
         break-before: page;
       }
 
@@ -782,10 +794,10 @@
 
       .module-heading {
         display: block;
-        margin-bottom: 4mm;
-        padding: 5mm 5mm 4mm;
+        margin-bottom: 3mm;
+        padding: 4mm 4.5mm 3.5mm;
         border: 0;
-        border-left: 5pt solid var(--brand);
+        border-left: 4pt solid var(--brand);
         border-radius: 0 8pt 8pt 0;
         background: linear-gradient(90deg, rgba(20, 95, 90, .13), rgba(255, 253, 248, .75));
         break-after: avoid;
@@ -793,25 +805,26 @@
 
       .module-kicker {
         color: var(--brand-2);
-        font-size: 8pt;
+        font-size: 7.2pt;
       }
 
       .module-heading h2 {
-        margin: 1mm 0 2mm;
+        margin: .8mm 0 1.5mm;
         color: var(--ink);
-        font-size: 17pt;
+        font-size: 14.5pt;
       }
 
       .cards {
-        grid-template-columns: 1fr;
-        gap: 4.5mm;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 3mm;
+        align-content: start;
       }
 
       .topic-card {
-        gap: 3.5mm;
-        padding: 5mm;
+        gap: 2.5mm;
+        padding: 3.5mm;
         border: 1pt solid var(--line);
-        border-radius: 8pt;
+        border-radius: 7pt;
         background: linear-gradient(180deg, #fffdf8, #fffaf0);
         box-shadow: none;
         break-inside: avoid;
@@ -820,32 +833,32 @@
 
       .topic-top {
         border-bottom: 1pt solid rgba(20, 95, 90, .16);
-        padding-bottom: 3mm;
+        padding-bottom: 2mm;
       }
 
       .topic-card h3 {
         margin-bottom: 1mm;
         color: var(--brand);
-        font-size: 13.5pt;
+        font-size: 10.8pt;
       }
 
       .student {
         color: var(--muted);
-        font-size: 8.8pt;
+        font-size: 7.4pt;
       }
 
       .topic-meta {
-        gap: 2mm;
-        margin-top: 2.5mm;
+        gap: 1.4mm;
+        margin-top: 1.8mm;
       }
 
       .tag {
         min-height: 0;
-        padding: 2pt 5pt;
+        padding: 1.5pt 4pt;
         border: .6pt solid rgba(139, 67, 38, .20);
         background: #f4eadc;
         color: #5d442d;
-        font-size: 7.6pt;
+        font-size: 6.5pt;
       }
 
       details {
@@ -854,9 +867,9 @@
       }
 
       summary {
-        margin-bottom: 1.5mm;
+        margin-bottom: 1mm;
         color: var(--brand-2);
-        font-size: 9pt;
+        font-size: 7.4pt;
         text-transform: uppercase;
         letter-spacing: .05em;
       }
@@ -869,19 +882,24 @@
       }
 
       .reflection {
-        padding: 3.5mm 4mm;
-        border-left: 4pt solid var(--accent);
+        padding: 2.3mm 3mm;
+        border-left: 3pt solid var(--accent);
         background: #fbf0d7;
         color: #3f3321;
         break-inside: avoid;
       }
 
-      .study-grid { grid-template-columns: 1fr; }
+      .study-grid {
+        grid-template-columns: 1fr;
+        min-height: 176mm;
+        align-content: center;
+      }
+
       #repaso { break-before: page; }
       #repaso .panel:nth-child(2) { display: none; }
 
       .panel {
-        padding: 5mm;
+        padding: 4mm;
         border: 1pt solid var(--line);
         box-shadow: none;
         break-inside: avoid;
@@ -889,14 +907,24 @@
 
       .flashcard {
         min-height: 0;
-        padding: 5mm;
+        padding: 4mm;
         border: 1pt dashed rgba(20, 95, 90, .50);
         background: #f2f8f4;
       }
 
       .flashcard .answer { display: block; }
-      #conclusion { break-before: page; }
-      .summary-list { gap: 4mm; }
+
+      #conclusion {
+        min-height: 176mm;
+        display: grid;
+        align-content: center;
+        break-before: page;
+      }
+
+      .summary-list {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 4mm;
+      }
 
       .summary-list li {
         padding: 4mm 5mm;
